@@ -1,0 +1,117 @@
+body {
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+h2 {
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
+.container {
+    display: flex;
+    /*flex-flow: row wrap;*/
+    flex-flow: row nowrap;
+    /*background-color: burlywood;*/
+    justify-content: space-evenly;
+}
+
+.item {
+    /*background-color: darkblue;*/
+    color: black;
+    text-align: center;
+    border: 1px solid white;
+    padding: 1vh;
+    /*font-size: 3vh;*/
+    flex: 1;
+    white-space:nowrap;
+    overflow: hidden;
+}
+/*background color classes for the different element types*/
+.itemColor1{
+    background-color: #ffffbe;
+}
+.itemColor2{
+    background-color:#ffe5be;
+}
+.itemColor3{
+    background-color:#ffc4c4;
+}
+.itemColor4{
+    background-color:#d4d4ff;
+}
+.itemColor5{
+    background-color:#e2efbf;
+} 
+.itemColor6{
+    background-color:#bdffbd;
+}        
+.itemColor7{
+    background-color:#bcdeff;
+}
+.itemColor8{
+    margin-top: 20px;
+    background-color:#b0ffff;
+}
+.itemColor9{
+    background-color:#c3ffeb;
+}
+.itemAsterisk{
+    margin-top: 20px;
+}
+/* element number*/
+.eNum {
+    font-size: 2vh;
+}
+/* element letters*/
+.eLetter {
+    font-size: 3vh;
+}
+/*element name*/
+.eName {
+    font-size: 1.5vh;
+    text-overflow: ellipsis; /* used this, no wrap and overflow  to maintain the equal box sizes */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#defaultImage {
+    display:none; /* the picture at the smallest setting is hidden by default*/
+}
+
+
+/*medium screens*/
+@media screen and (max-width:800px) {
+    .eName {
+        display: none;
+    }
+    
+}
+
+/*small to medium screens*/
+@media screen and (max-width:600px) {
+    .eName {
+        display: none;
+    }
+    .eLetter {
+        font-size: 2vh;
+    }
+    
+}
+/* small screens */
+@media screen and (max-width:500px){
+    .container{
+        display:none;
+    }
+    /* remove containers and replace with default image*/
+    #defaultImage {
+        max-width:500px;
+        display: block;
+    }
+    #imgBackg {
+        width:100%;
+    }
+}
